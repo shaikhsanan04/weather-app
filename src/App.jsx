@@ -17,7 +17,8 @@ function App() {
   const [favorites, setFavorites] = useState([])
   const [currentCity, setCurrentCity] = useState('')
 
-  const API_KEY = 'aff7a109974bb7a8c5119fe2b757516a'
+  
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
   useEffect(() => {
     const savedFavorites = localStorage.getItem('weatherFavorites')
